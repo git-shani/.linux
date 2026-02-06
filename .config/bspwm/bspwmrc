@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d • • • • •
+bspc monitor -d      
 
 bspc config border_width         2
 bspc config window_gap           5
@@ -29,19 +29,15 @@ xsetroot -cursor_name left_ptr &
 
 #wallpaper
 pkill feh
-feh --bg-fill  ~/wallpapers/keqinglionsroar.png &
+feh --bg-fill  ~/wallpapers/keqingUW.jpg &
 
 #compositor
-pkill picom
-picom -b &
+pkill xcompmgr
+xcompmgr -c -C -r 0 -o 0 -f -I 0.12 -O 0.09 -D 12 -F &
 
 #notifications
 pkill dunst
 dunst &
 
-#statusbar
-pkill polybar
-polybar &
-
 #input
-ibus-daemon &
+xremap ~/.config/xremap/config.yml &
