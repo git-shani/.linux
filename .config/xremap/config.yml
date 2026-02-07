@@ -1,0 +1,16 @@
+modmap:
+  - name: shit
+    remap:
+      Space:
+        held: Super_L
+        alone: Space
+        free_hold: true
+        alone_timeout_millis: 25
+
+  - name:
+    remap:
+      CapsLock:
+        held: Control_L
+        alone: CapsLock
+        alone_timeout_millis: 250
+ 
